@@ -23,9 +23,9 @@ abstract class Vehicle {
     }
 
     // 하위 클래스에서 구현해야 하는 추상 메소드 speedUp
-    public abstract void speedUp();
+    public abstract void speedUp(); // 하위클래스에서 사용하려면 반드시 무조건 오버라이딩 해야함
 }
-
+//추상클래스는 일반 메소드도 포함 할 수 있음
 // Car 클래스 선언
 class Car {
     // 속도와 바퀴 개수를 protected로 선언하여 하위 클래스에서 접근 가능하게 함
