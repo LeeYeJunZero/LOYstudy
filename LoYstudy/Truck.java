@@ -89,7 +89,7 @@ public class Truck extends Car implements BaeMin { // Truck은 Car의 내용을 
         myCar.speedUp(); // 동적바인딩(객체를 따라감)
         System.out.println("트럭의 속도 " + myCar.velocity); // 트럭의 속도 160 출력 위에서 speedup의 30이 호출돼서 130인 상태로 다시 한 번 호출 됐으므로 160이 나옴
 
-        // myCar.warn(); // 컴파일 에러 이유 Car 타입에는 warn 메소드가 없음
+        // myCar.warn(); // Wran은 Truck에 있는 메소드라 불가능함 동적바인딩은 오버라이딩된거만 접근 가능함 나머지는 접근 불가능
 
         // 인터페이스를 통한 다형성 예시
         BaeMin myBaeMin = new Cycle();
