@@ -99,3 +99,4 @@ public class Truck extends Car implements BaeMin { // Truck은 Car의 내용을 
     } 
 } // 자바의 업캐스팅은 무조건 동적바인딩
 //정적바인딩은 문장을 따라감
+//다형성에는 업캐스팅 동적바인딩  오버라이딩이 포함되야한다
