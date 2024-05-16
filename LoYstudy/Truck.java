@@ -61,7 +61,7 @@ class Cycle implements BaeMin {
 }
 
 // Truck 클래스 선언, Car 클래스를 상속받고 BaeMin 인터페이스를 구현
-public class Truck extends Car implements BaeMin {
+public class Truck extends Car implements BaeMin { // Truck은 Car의 내용을 포함하고 있음
     // Car 클래스의 speedUp 메소드를 오버라이딩
     public void speedUp() {
         velocity += 30; // 속도를 30 증가시킴
@@ -85,8 +85,8 @@ public class Truck extends Car implements BaeMin {
         System.out.println("트럭의 속도 " + myTruck.velocity); // 트럭의 속도 130 출력 오버라이딩으로 30을 덮어썼기에 100+30 의 값이 나옴
 
         // Car 타입의 참조 변수를 통해 Truck 객체 참조(포인터)
-        Car myCar = myTruck;
-        myCar.speedUp();
+        Car myCar = myTruck; // 업캐스팅
+        myCar.speedUp(); // 동적바인딩(객체를 따라감)
         System.out.println("트럭의 속도 " + myCar.velocity); // 트럭의 속도 160 출력 위에서 speedup의 30이 호출돼서 130인 상태로 다시 한 번 호출 됐으므로 160이 나옴
 
         // myCar.warn(); // 컴파일 에러 이유 Car 타입에는 warn 메소드가 없음
@@ -98,3 +98,4 @@ public class Truck extends Car implements BaeMin {
         myBaeMin.deliver(); // 트럭으로 배달합니다. 출력
     }
 }
+//정적바인딩은 문장을 따라감
