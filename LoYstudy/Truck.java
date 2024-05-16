@@ -82,14 +82,14 @@ public class Truck extends Car implements BaeMin {
         // Truck 객체를 생성하여 다형성 예시
         Truck myTruck = new Truck();
         myTruck.speedUp();
-        System.out.println("트럭의 속도 " + myTruck.velocity); // 트럭의 속도 130 출력
+        System.out.println("트럭의 속도 " + myTruck.velocity); // 트럭의 속도 130 출력 오버라이딩으로 30을 덮어썼기에 100+30 의 값이 나옴
 
-        // Car 타입의 참조 변수를 통해 Truck 객체 참조
+        // Car 타입의 참조 변수를 통해 Truck 객체 참조(포인터)
         Car myCar = myTruck;
         myCar.speedUp();
-        System.out.println("트럭의 속도 " + myCar.velocity); // 트럭의 속도 160 출력
+        System.out.println("트럭의 속도 " + myCar.velocity); // 트럭의 속도 160 출력 위에서 speedup의 30이 호출돼서 130인 상태로 다시 한 번 호출 됐으므로 160이 나옴
 
-        // myCar.warn(); // 컴파일 에러 - Car 타입에는 warn 메소드가 없음
+        // myCar.warn(); // 컴파일 에러 이유 Car 타입에는 warn 메소드가 없음
 
         // 인터페이스를 통한 다형성 예시
         BaeMin myBaeMin = new Cycle();
