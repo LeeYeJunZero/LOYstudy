@@ -1,4 +1,4 @@
-// 인터페이스 BaeMin 선언
+// 인터페이스 BaeMin 선언 추상 메소드와 상수만을 포함 가능
 interface BaeMin {
     // 배달 기능을 추상 메소드로 정의
     public void deliver();
