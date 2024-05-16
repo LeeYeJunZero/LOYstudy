@@ -95,7 +95,7 @@ public class Truck extends Car implements BaeMin { // Truck은 Car의 내용을 
         BaeMin myBaeMin = new Cycle();
         myBaeMin.deliver(); // 자전거로 배달합니다. 출력
         myBaeMin = myTruck;
-        myBaeMin.deliver(); // 트럭으로 배달합니다. 출력
-    }
+        myBaeMin.deliver(); // 바로 위와 형태가 같지만 다르게 동작함 이게 다형성
+    } 
 } // 자바의 업캐스팅은 무조건 동적바인딩
 //정적바인딩은 문장을 따라감
