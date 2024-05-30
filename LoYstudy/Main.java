@@ -1,17 +1,43 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import java.util.*;
 public class Main {
-   public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see  how IntelliJ IDEA suggests fixing it.
+    public static void main(String[] args){
 
+        ArrayList<Integer> v = new ArrayList<Integer>();
+        v.add(5);
+        v.add(4);
+        v.add(-1);
 
-        for(int i=1;i<10;i++){
-            for(int j=1;j<i;j++){
-                System.out.print("*");
-            }
-            System.out.println("");
+        Iterator<Integer> it = v.iterator();
+        while(it.hasNext()){
+            int n = it.next();
+            System.out.println(n);
         }
+        System.out.println("=========================================================");
+        for(Integer i : v){
+            System.out.println(i);
+        }
+        HashMap<String, Integer> scoreMap = new HashMap<String, Integer>();
 
+        scoreMap.put("김성동", 97);
+        scoreMap.put("황기태", 88);
+        scoreMap.put("김남윤", 98);
+        scoreMap.put("이재문", 70);
+        scoreMap.put("한원선", 99);
+
+        System.out.println("=================================================================");
+        System.out.println("HashMap의 요소 개수 :" + scoreMap.size());
+
+        Set<String> keys = scoreMap.keySet();
+        Iterator<String> it2 = keys.iterator();
+        while (it2.hasNext()){
+            String name = it2.next();
+            int score = scoreMap.get(name);
+            System.out.println(name+":"+score);
+        }
+        System.out.println("===================================================================");
+        for(String key : keys){
+            System.out.println(key+":"+scoreMap.get(key));
+        }
     }
 }
